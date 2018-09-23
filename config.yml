@@ -1,0 +1,19 @@
+---
+api_key: 
+zoom: 18
+format: png
+maptype: roadmap
+size: 480x360
+building_colors:
+    type1:
+        - 197
+        - 184
+        - 184
+    type2:
+        - 255
+        - 201
+        - 139
+    type3:
+        - 255
+        - 247
+        - 238
