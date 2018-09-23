@@ -17,3 +17,16 @@ building_colors:
         - 255
         - 247
         - 238
+shanghai_colors:
+    type1:
+        - 208
+        - 198
+        - 198
+    type2:
+        - 252
+        - 212
+        - 165
+    type3:
+        - 255
+        - 201
+        - 139

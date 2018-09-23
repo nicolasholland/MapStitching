@@ -79,7 +79,9 @@ def download_map_segment(outname, lat, lon):
     f.close()
 
     img = imageio.imread(outname)
-    plt.imshow(segment_buildings(img, CFG['building_colors']))
+    #plt.imshow(img)
+    #plt.imshow(segment_buildings(img, CFG['building_colors']))
+    plt.imshow(segment_buildings(img, CFG['shanghai_colors']))
     plt.show()
 
 
@@ -87,4 +89,5 @@ def download_map_segment(outname, lat, lon):
 if __name__ == '__main__':
     LAT = 47.999
     LON = 7.8421
+    LAT, LON = 31.212801, 121.452318
     download_map_segment('example.png', LAT, LON)
