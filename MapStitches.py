@@ -108,7 +108,7 @@ for tY in range(0, nofMapTilesY):
     lat = LAT - int(nofMapTilesY/2) * moveY + tY * moveY
 
     # get Map
-    print "Downloading " + str(progress) + "/" + str(progressTotal)
+    print("Downloading " + str(progress) + "/" + str(progressTotal))
     f=open(path+'/'+str(tX)+str(tY)+'.png','wb')
     f.write(requests.get("http://maps.googleapis.com/maps/api/staticmap?center=%f,%f&zoom=%d&size=640x640&scale=2&maptype=hybrid&language=en-EN&sensor=false"%(lat,lon,ZOOM)).content)
     f.close()
@@ -130,7 +130,7 @@ for tY in range(0, nofMapTilesY):
       progress = progress + 1
       continue
 
-    print "Stitching " + str(progress) + "/" + str(progressTotal)
+    print("Stitching " + str(progress) + "/" + str(progressTotal))
     if StitchOnY:
       cX = 0
   
@@ -148,7 +148,7 @@ for tY in range(0, nofMapTilesY):
       # transform vX,vY from the patch coordsystem into global System and compute correction
       cY = abs((tY-1)*mapTileY+1215 - (tY * mapTileY + vY))
       #cY = cY -2
-      print cY
+      print(cY)
 
     else:
       # Patch finding
@@ -184,7 +184,7 @@ for tY in range(0, nofMapTilesY):
 
 # Create empty canvas for tiles
 output = np.zeros((globalStartY, finalEndX, 3), np.uint8)
-print "Final adjustments "
+print("Final adjustments ")
 
 for x in range(0, finalEndX):
   for y in range(0, globalStartY):
